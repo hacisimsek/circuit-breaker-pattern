@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: order-service
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+custom-circuit-breaker:
+  failure-threshold: 5
+  reset-timeout-seconds: 30

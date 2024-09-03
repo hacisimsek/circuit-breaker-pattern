@@ -11,6 +11,7 @@
 	<groupId>com.hacisimsek</groupId>
 	<artifactId>circuit-breaker-pattern</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>circuit-breaker-pattern</name>
 	<description>I have created and enhanced my own Circuit Breaker pattern without using the traditional three-part module.</description>
 	<url/>
@@ -20,6 +21,10 @@
 	<developers>
 		<developer/>
 	</developers>
+	<modules>
+		<module>order-service</module>
+		<module>inventory-service</module>
+	</modules>
 	<scm>
 		<connection/>
 		<developerConnection/>
@@ -30,6 +35,7 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.3</spring-cloud.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -42,6 +48,11 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
 		<dependency>
