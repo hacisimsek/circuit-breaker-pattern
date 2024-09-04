@@ -58,13 +58,3 @@ public class CircuitBreakerImpl {
     }
 }
 
-@FunctionalInterface
-interface CircuitBreakerSupplier<T> {
-    T get() throws Exception;
-}
-
-class CircuitBreakerOpenException extends RuntimeException {
-    public CircuitBreakerOpenException(String message) {
-        super(message);
-    }
-}
